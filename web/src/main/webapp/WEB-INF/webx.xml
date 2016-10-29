@@ -78,27 +78,6 @@
 				<match name="*" store="temporaryCookie" />
 			</store-mappings>
 		</request-contexts:session>
-		<request-contexts:rewrite>
-			<rule pattern="^/fp/(\w+).png$">
-				<substitution uri="/Image.htm" flags="L,QSA" />
-			</rule>
-			<rule pattern="^/fp/clear.css$">
-				<substitution uri="/Style.htm" flags="L,QSA" />
-			</rule>
-			<rule pattern="^/fp/clean.png$">
-				<substitution uri="/Png.htm" flags="L,QSA" />
-			</rule>
-			<rule pattern="^/fp/detect.json$">
-				<substitution uri="/Detect.htm" flags="L,QSA" />
-			</rule>
-
-			<rule pattern="^/fp/clear.swf$">
-				<substitution uri="/static/flash/clear.swf" flags="L,QSA" />
-			</rule>
-			<rule pattern="^/index.htm$">
-				<substitution uri="/status.html" flags="L,QSA" />
-			</rule>
-		</request-contexts:rewrite>
 	</services:request-contexts>
 
 	<!-- 将beans暴露给模板。这里定义的tools可被所有components之间共享。 -->
