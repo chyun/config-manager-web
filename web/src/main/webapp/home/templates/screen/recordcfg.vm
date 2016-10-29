@@ -1,0 +1,51 @@
+
+<script type="text/javascript">
+
+</script>
+
+<div class="table-area">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>属性</th>
+            <th width="50%">值</th>
+            <th>描述</th>
+            <th class="col-opera">操作</th>
+        </tr>
+        </thead>
+        <tbody id="list">
+            #foreach($!param in $!{context.keySet()})
+            <tr>
+                <td>
+                    $!param
+                </td>
+                <td>
+                    $!{context.get($!param)}
+                </td>
+                <td>
+                </td>
+            </tr>
+            #end
+        </tbody>
+    </table>
+</div>
+
+<div class="header">
+</div>
+<form name="loginForm" id="loginForm" action="" method="post">
+	<input type="hidden" name="action" value="RecordcfgAction/">
+	<input type="hidden" name="event_submit_do_record" value="Submit">
+    <div class="legend">新增配置</div>
+    <hr>
+    <hr class="decoration">
+    <fieldset>
+      <div class="input-prepend"> <span>key</span>
+        <input type="text" id="keyText"  placeholder="" class="input" name="keyText" value="key">
+      </div>
+      <div class="input-prepend"> <span>value</span>
+        <input type="text" id="valueText"  placeholder="" class="input" name="valueText" value="">
+      </div>
+      <button type="submit" class="btn-login" >添&nbsp;&nbsp;&nbsp;&nbsp;加</button>
+    </fieldset>
+    <hr class="bottomHr">
+</form>

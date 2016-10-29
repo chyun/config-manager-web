@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fraudmetrix反欺诈云</title>
+</head>
+
+<body>
+<div class="login-container">
+	$screen_placeholder
+</div>
+</body>
+</html>

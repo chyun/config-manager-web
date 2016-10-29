@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config description="自动配置：umid-web">
+	<!-- 目录配置 -->
+	<group name="umid-path">
+		<property name="umid.workdir" defaultValue="/home/admin"
+			description="应用一级目录" />
+		<property name="umid.apphome" defaultValue="${umid.workdir}/umid"
+			description="应用二级目录" />
+		<property name="umid.loggingRoot" defaultValue="${umid.apphome}/logs"
+			description="应用日志目录" />
+	</group>
+
+	<!-- 控制配置 -->
+	<group name="umid-control">
+		<property name="umid.hostname" defaultValue="umidhost"
+			description="umid的机器分组名" />
+		<property name="umid.loggingLevel" defaultValue="warn"
+			description="umid的日志级别" />
+		<property name="umid.loggingLevel.info" defaultValue="info"
+			description="umid信息日志的级别" />
+	</group>
+
+	<script>
+		<generate template="log4j.xml.vm" destfile="WEB-INF/log4j.xml"
+			charset="UTF-8" />
+		<generate template="web.xml.vm" destfile="WEB-INF/web.xml"
+			charset="UTF-8" />
+	</script>
+</config>
+
+
